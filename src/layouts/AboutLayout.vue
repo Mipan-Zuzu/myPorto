@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import AboutComp from "../components/AboutComp.vue"
 import type {CardAbout} from "../types/Interface"
 
 const data: CardAbout = {
