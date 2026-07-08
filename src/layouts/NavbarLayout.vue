@@ -118,15 +118,3 @@ onBeforeUnmount(() => {
         </div>
     </div>
 </template>
-
-<style scoped>
-@reference "tailwindcss";
-
-.nav-link {
-    @apply hover:bg-stone-700 hover:rounded-lg hover:duration-300
-}
-
-.nav {
-    @apply flex gap-2 p-1 items-center w-full
-}
-</style>

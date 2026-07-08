@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@reference "tailwindcss";
 
 body {font-family: "Poppins", sans-serif;
   font-weight: 100;
@@ -103,4 +104,22 @@ body {font-family: "Poppins", sans-serif;
 @theme {
   --font-roboto: "Roboto", sans-serif;
   --font-inter: "Inter", sans-serif;
+}
+
+.gradentText {
+    @apply bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent
+}
+
+;
+
+.gradentTextv2 {
+    @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent
+}
+
+.nav-link {
+    @apply hover:bg-stone-700 hover:rounded-lg hover:duration-300
+}
+
+.nav {
+    @apply flex gap-2 p-1 items-center w-full
 }

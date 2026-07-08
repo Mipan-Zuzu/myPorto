@@ -4,17 +4,6 @@ import {StickyNote} from "lucide-vue-next"
 import Typed from "typed.js"
 import { codeToHtml } from 'shiki'
 const el = ref()
-const code = 
-`import axios from "axios";
-import type { User } from "@/models/User";
-
-export async function getUser(): Promise<User> {
-  const response = await axios.get<User>(
-    "https://api.example.com/user"
-  );
-
-  return response.data;
-}`
 const result = ref()
 
 onMounted(() => {
@@ -33,22 +22,13 @@ const data = {
     profile : "https://avatars.githubusercontent.com/u/194325824?v=4"
 }
 
-
-watchEffect(async() => {
-const html = await codeToHtml(code, {
-  lang: 'javascript',
-  theme: 'vitesse-dark'
-})
-result.value = html
-})
-
 </script>
 
 <template>
     <div class="flex flex-col justify-center mt-20  items-center gap-17 md:flex-row">
     <div class="flex flex-col mt-10 ml-2 md:ml-5">
         <div class="flex flex-col">
-            <p class="w-30 pl-2 mb-5 rounded-md text-sm rotate-3 p-1 bg-sky-300 font-medium text-white animate-pulse">Experience ++</p>
+            <p class="w-38 pl-2 mb-5 rounded-md text-lg rotate-3 p-1 bg-sky-300 font-medium text-white animate-pulse">Experience ++</p>
             <h1
                 class="text-5xl font-extrabold gradentTextv2 md:text-7xl">
                 HEY THERE
@@ -59,17 +39,17 @@ result.value = html
             </div>
         </div>
         <div class="mt-3">
-            <span ref="el" class="text-xl font-semibold gradentText"></span>
+            <span ref="el" class="text-xl font-semibold gradentText md:text-2xl"></span>
         </div>
-        <div class="mt-10 font-medium text-stone-400">
-            <p class="w-75 md:w-100">Specializing in web infrastructure, authentication, monitoring systems, and scalable backend APIs.</p>
+        <div class="mt-10 font-normal text-stone-400">
+            <p class="w-75 text-xl md:w-100 md:text-xl">Specializing in web <span class="bg-red-500 text-white">infrastructure</span>, authentication, monitoring systems, and <span class="bg-red-500 text-white">scalable</span> backend APIs.</p>
         </div>
         <div class="flex flex-col mt-5 gap-3 md:flex-row">
         <div class="flex justify-start gap-2 ">
             <button class="p-3 px-8 border-none bg-stone-700 text-white text-xl font-semibold rounded-lg">View Resume</button>
         </div>
         <div class="flex justify-start gap-2">
-            <button class="p-3 px-7 border border-stone-500 text-stone-500 text-xl font-semibold rounded-lg">Start a Project</button>
+            <button class="p-3 px-10 border border-stone-500 text-stone-500 text-xl font-semibold rounded-lg">Contact Me</button>
         </div>
         </div>
         <div class="absolute w-72 p-2 bg-linear-to-r from-sky-500 via-violet-500 to-pink-500 blur-2xl">
@@ -80,7 +60,7 @@ result.value = html
             <img class=" -rotate-3 w-8 h-8 md:w-10 md:h-10" :src="`${data.tech}typescript`" alt="">
             <h1 class=" text-sky-700 font-semibold md:text-xl">Intermediate</h1>
         </div>
-        <img class="w-64  h-64 rounded-full md:w-100 md:h-100" :src="data.profile" alt="">
+        <img class="w-64  h-64 rounded-full md:w-100 md:h-100" :src="data.profile" alt=""   fetchpriority="high">
         <div class="absolute animate-bounce px-3 flex items-center gap-2 backdrop-blur-md shadow-2xl p-1 rounded-2xl">
             <img class=" -rotate-3  w-8 h-8 md:w-10 md:h-10" :src="`${data.tech}javascript`" alt="">
             <h1 class=" text-stone-700 font-semibold md:text-xl md:px-5">Expert</h1>
@@ -88,14 +68,3 @@ result.value = html
         </div>
     </div>
 </template>
-
-<style scoped>
-@reference "tailwindcss";
-
-.gradentText {
-    @apply bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent
-};
-.gradentTextv2 {
-    @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent
-};
-</style>
