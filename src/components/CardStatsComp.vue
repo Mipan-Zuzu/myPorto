@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import {  UserRound, Book, Laptop, Layers } from "lucide-vue-next"
-    import {defineProps} from "vue"
     import type {CardStats} from "../types/Interface"
 
-    const {rank, title, ico} = defineProps<CardStats>()
+    const { rank, title, ico } = defineProps<CardStats>()
 
 </script>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Plus, UserRound, Book, Laptop, Layers } from "lucide-vue-next"
+import { UserRound, Book, Laptop, Layers } from "lucide-vue-next"
 import type {CardStats} from "../types/Interface"
 import CardStatsComp from '../components/CardStatsComp.vue'
 

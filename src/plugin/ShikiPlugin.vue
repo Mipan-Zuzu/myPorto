@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { watchEffect, ref, defineProps } from "vue"
+import { watchEffect, ref} from "vue"
 import { codeToHtml } from "shiki"
 
 interface Html {
