@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
+    "ky": "^2.0.2",
     "lucide-vue-next": "^1.0.0",
     "motion": "^12.42.2",
     "pinia": "^3.0.4",

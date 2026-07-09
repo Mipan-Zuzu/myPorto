@@ -51,6 +51,7 @@ onBeforeUnmount(() => {
             <a href="">{{ data.navigation.skil }}</a>
             <a href="">{{ data.navigation.tech }}</a>
             <a href="">{{ data.navigation.contac }}</a>
+            <a href="">{{ data.navigation.contac }}</a>
         </div>
         <div>
             <button @click="handleNavigationBar" class="flex gap-1 items-center">

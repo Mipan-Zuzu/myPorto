@@ -7,11 +7,13 @@ import ClaudeMascot from '../components/ClaudeMascot.vue'
 import ToolsTech from '../layouts/ToolsTech.vue'
 import Project from '../layouts/Project.vue'
 import TitleProject from '../components/TitleProject.vue'
+import RepositorysLayout from '../layouts/RepositorysLayout.vue'
+import CertivLayout from '../layouts/CertivLayout.vue'
 
 </script>
 
 <template>
-    <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col overflow-hidden justify-center items-center">
         <NavbarLayout />
         <div class="mt-10">
             <HeroSectionLayout />
@@ -29,6 +31,12 @@ import TitleProject from '../components/TitleProject.vue'
         <div class="flex flex-col justify-center items-center">
             <TitleProject />
             <Project />
+        </div>
+        <div class="mt-20">
+            <RepositorysLayout />
+        </div>
+        <div>
+            <CertivLayout />
         </div>
     </div>
 </template>
