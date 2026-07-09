@@ -9,6 +9,8 @@ import Project from '../layouts/Project.vue'
 import TitleProject from '../components/TitleProject.vue'
 import RepositorysLayout from '../layouts/RepositorysLayout.vue'
 import CertivLayout from '../layouts/CertivLayout.vue'
+import ClientLayouts from '../layouts/ClientLayouts.vue'
+import ContacLayout from '../layouts/ContacLayout.vue'
 
 </script>
 
@@ -37,6 +39,12 @@ import CertivLayout from '../layouts/CertivLayout.vue'
         </div>
         <div>
             <CertivLayout />
+        </div>
+        <div class="mt-20">
+            <ClientLayouts />
+        </div>
+        <div class="mt-15 border-t border-b p-20 w-full text-center">
+            <ContacLayout />
         </div>
     </div>
 </template>

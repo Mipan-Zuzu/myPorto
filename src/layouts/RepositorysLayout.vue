@@ -51,11 +51,11 @@ const maxChar = 30
 <style scoped>
 @keyframes marquee {
   from {
-    transform: translateX(50%);
+    transform: translateX(47%);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(-47%);
   }
 }
 

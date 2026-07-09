@@ -116,10 +116,18 @@ body {font-family: "Poppins", sans-serif;
     @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent
 }
 
+.gradentTextv3 {
+    @apply bg-gradient-to-r from-sky-400 to-violet-700 text-white
+}
+
 .nav-link {
     @apply hover:bg-stone-700 hover:rounded-lg hover:duration-300
 }
 
 .nav {
     @apply flex gap-2 p-1 items-center w-full
+}
+
+.textT {
+  @apply  bg-gradient-to-r from-sky-400 to-violet-400 text-white
 }
