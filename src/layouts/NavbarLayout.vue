@@ -1,6 +1,16 @@
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import { User, Info, Instagram, Github, Linkedin, ChevronDown } from "lucide-vue-next"
+
+import type { EventScrol } from "../types/Interface"
+
+const handlerScrol = (id: string) => {
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    })
+}
+
+const urlWaMe = "https://wa.me/62881037637602"
 
 const navbar = ref(false)
 const data = {
@@ -9,7 +19,7 @@ const data = {
     name: "saka",
     navigation: {
         about: "About Me",
-        skil: "Skills",
+        project: "Project",
         tech: "TechStack",
         contac: "Contact"
     },
@@ -18,7 +28,7 @@ const data = {
         github: "github",
         linkedin: "linkedin"
     },
-    hire : "HireMe"
+    hire: "HireMe"
 }
 
 const handleNavigationBar = () => {
@@ -27,31 +37,31 @@ const handleNavigationBar = () => {
 }
 
 const closeMenu = (e) => {
-  if (!e.target.closest(".menu")) {
-    navbar.value = false;
-  }
+    if (!e.target.closest(".menu")) {
+        navbar.value = false;
+    }
 };
 
 onMounted(() => {
-  document.addEventListener("click", closeMenu);
+    document.addEventListener("click", closeMenu);
 });
 
 onBeforeUnmount(() => {
-  document.removeEventListener("click", closeMenu);
+    document.removeEventListener("click", closeMenu);
 });
 </script>
 
 <template>
-    <div class="fixed w-full flex justify-between text-sm p-1 top-2 ml-1  border menu border-stone-400 backdrop-blur-lg z-50">
+    <div
+        class="fixed w-full flex justify-between text-sm p-1 top-2 ml-1  border menu border-stone-400 backdrop-blur-lg z-50">
         <div>
             <img class="w-16" :src="data.img" alt="mipan">
         </div>
         <div class="items-center text-stone-500 font-medium gap-10 hidden md:flex">
-            <a href="">{{ data.navigation.about }}</a>
-            <a href="">{{ data.navigation.skil }}</a>
-            <a href="">{{ data.navigation.tech }}</a>
-            <a href="">{{ data.navigation.contac }}</a>
-            <a href="">{{ data.navigation.contac }}</a>
+            <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('aboutme')">{{ data.navigation.about }}</button>
+            <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('project')">{{ data.navigation.project }}</button>
+            <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('tech')">{{ data.navigation.tech }}</button>
+            <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('contact')">{{ data.navigation.contac }}</button>
         </div>
         <div>
             <button @click="handleNavigationBar" class="flex gap-1 items-center">
@@ -71,45 +81,48 @@ onBeforeUnmount(() => {
 
                     <hr class="border-stone-700">
 
-                    <a href="" class="nav nav-link">
+                    <button @click="handlerScrol('aboutme')" class="nav nav-link">
                         <h1 href="" class="font-medium text-lg">{{ data.navigation.about }}</h1>
-                    </a>
+                    </button>
 
 
-                    <a href="" class="nav nav-link">
-                        <h1 href="" class="font-medium text-lg">{{ data.navigation.skil }}</h1>
-                    </a>
+                    <button @click="handlerScrol('project')" class="nav nav-link">
+                        <h1 href="" class="font-medium text-lg">{{ data.navigation.project }}</h1>
+                    </button>
 
-                    <a href="" class="nav nav-link">
+                    <button @click="handlerScrol('tech')" class="nav nav-link">
                         <h1 class="font-medium text-lg">{{ data.navigation.tech }}</h1>
-                    </a>
+                    </button>
 
-                    <a href="" class="nav nav-link">
+                    <button @click="handlerScrol('contact')" class="nav nav-link">
                         <h1 class="font-medium text-lg">{{ data.navigation.contac }}</h1>
-                    </a>
+                    </button>
 
                     <hr class="border-stone-700">
 
                     <div class="flex flex-col gap-3 mt-2">
-                        <a href="" class="flex gap-2  items-center w-full">
+                        <a target="_blank" href="https://www.instagram.com/mipanzuzuzuz123"
+                            class="flex gap-2  items-center w-full">
                             <Instagram class="w-5 h-5" />
                             <h1 class="font-medium text-lg">{{ data.social.instagram }}</h1>
                         </a>
 
-                        <a href="" class="flex gap-2  items-center w-full">
+                        <a target="_blank" href="https://github.com/Mipan-Zuzu" class="flex gap-2  items-center w-full">
                             <Github class="w-5 h-5" />
                             <h1 class="font-medium text-lg">{{ data.social.github }}</h1>
                         </a>
 
-                        <a href="" class="flex gap-2  items-center w-full">
+                        <a target="_blank" href="https://www.linkedin.com/in/kadek-isaka"
+                            class="flex gap-2  items-center w-full">
                             <Linkedin class="w-5 h-5" />
                             <h1 class="font-medium text-lg">{{ data.social.linkedin }}</h1>
                         </a>
 
                         <div class="absolute w-72 p-2 bg-linear-to-r from-sky-500 via-violet-500 to-pink-500 blur-2xl">
-                            
+
                         </div>
-                        <a href="" class="flex p-2 justify-center rounded-md items-center w-full bg-linear-to-r from-sky-500 via-violet-500 to-pink-500">
+                        <a :href="urlWaMe"
+                            class="flex p-2 justify-center rounded-md items-center w-full bg-linear-to-r from-sky-500 via-violet-500 to-pink-500">
                             <h1 class="font-medium text-xl">{{ data.hire }}</h1>
                         </a>
                     </div>

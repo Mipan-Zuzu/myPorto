@@ -2,7 +2,7 @@
 import { ref, onMounted, watchEffect } from "vue"
 import {StickyNote} from "lucide-vue-next"
 import Typed from "typed.js"
-import { codeToHtml } from 'shiki'
+import cv from "../assets/cv/CV.pdf"
 const el = ref()
 const result = ref()
 
@@ -15,6 +15,8 @@ onMounted(() => {
         loop: true,
     })
 })
+
+const urlWaMe = "https://wa.me/62881037637602"
 
 const data = {
     waving: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png",
@@ -46,10 +48,10 @@ const data = {
         </div>
         <div class="flex flex-col mt-5 gap-3 md:flex-row">
         <div class="flex justify-start gap-2 ">
-            <button class="p-3 px-8 border-none bg-stone-700 text-white text-xl font-semibold rounded-lg">View Resume</button>
+            <a target="_blank" :href="cv" class="p-3 px-8 bg-stone-700 text-white text-xl font-semibold rounded-lg hover:bg-stone-600" download="Isaka-cv.pdf">View Resume</a>
         </div>
         <div class="flex justify-start gap-2">
-            <button class="p-3 px-10 border border-stone-500 text-stone-500 text-xl font-semibold rounded-lg">Contact Me</button>
+            <a target="_blank" :href="urlWaMe" class="p-3 px-10 border border-stone-500 text-stone-500 text-xl font-semibold rounded-lg">Contact Me</a>
         </div>
         </div>
         <div class="absolute w-72 p-2 bg-linear-to-r from-sky-500 via-violet-500 to-pink-500 blur-2xl">

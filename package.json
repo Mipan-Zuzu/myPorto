@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconify-icons/simple-icons": "^1.2.74",
+    "@iconify/vue": "^5.0.1",
+    "@primeuix/themes": "^2.0.3",
     "@tailwindcss/vite": "^4.3.2",
     "ky": "^2.0.2",
     "lucide-vue-next": "^1.0.0",
-    "motion": "^12.42.2",
-    "pinia": "^3.0.4",
+    "primevue": "^4.5.5",
     "tailwindcss": "^4.3.2",
     "typed.js": "^3.0.0",
     "vue": "^3.5.39"

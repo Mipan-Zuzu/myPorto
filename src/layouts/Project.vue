@@ -42,7 +42,7 @@ const CardDat: CardProject[] = [
         titles: "Pulsr",
         desk: "Pulsr is an all in one SaaS monitoring platform. Monitor all your systems from a single dashboard with health checks, logs, metrics, and real-time insights.",
         category: ["Monitoring", "Golang", "SaaS"],
-        url: ""
+        url: "https://github.com/Mipan-Zuzu/Pulsr"
     }
 ]
 </script>
