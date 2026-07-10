@@ -11,7 +11,7 @@ const stateOptions = ref([
     { label: 'IND', value: 'ind' }
 ]);
 
-watch(value, (newVal, oldVal) => {
+watch(value, (newVal) => {
     localStorage.setItem("lang", newVal)
 })
 

@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
-import { User, Info, Instagram, Github, Linkedin, ChevronDown } from "lucide-vue-next"
+import { User, Instagram, Github, Linkedin, ChevronDown } from "lucide-vue-next"
 
-import type { EventScrol } from "../types/Interface"
 
 const handlerScrol = (id: string) => {
-    document.getElementById(id).scrollIntoView({
+    document.getElementById(id)?.scrollIntoView({
         behavior: "smooth"
     })
 }
@@ -36,7 +35,9 @@ const handleNavigationBar = () => {
     console.log(navbar.value)
 }
 
-const closeMenu = (e) => {
+const closeMenu = (e: MouseEvent) => {
+    if (!(e.target instanceof Element)) return
+
     if (!e.target.closest(".menu")) {
         navbar.value = false;
     }
