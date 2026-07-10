@@ -13,16 +13,11 @@ import ClientLayouts from '../layouts/ClientLayouts.vue'
 import ContacLayout from '../layouts/ContacLayout.vue'
 import FooterLayouts from '../layouts/FooterLayouts.vue'
 
-
-
-import {ref} from "vue"
-
-
 </script>
 
 <template>
     <div class="flex flex-col overflow-hidden justify-center items-center">
-        <NavbarLayout :scrol="scrol" />
+        <NavbarLayout />
         <div class="mt-10">
             <HeroSectionLayout />
         </div>
