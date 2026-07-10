@@ -32,7 +32,7 @@ const CardDat: CardProject[] = [
         titles: "MotionArt",
         desk: "Realtime Chat ",
         category: ["WebSocket", "RealTime"],
-        url: ""
+        url: "https://github.com/Mipan-Zuzu/And-Learning-path"
     },
     {
         status: "Progress",
