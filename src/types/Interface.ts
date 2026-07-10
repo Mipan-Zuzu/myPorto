@@ -1,4 +1,4 @@
-import type { Component } from "vue";
+import type { Component, Ref } from "vue";
 
 export interface CardAbout {
     Title: string
@@ -21,4 +21,11 @@ export interface CardProject {
     desk: string
     category: string[]
     url: string
+}
+
+export interface EventScrol {
+    about: Ref<HTMLElement | null>
+    projects: Ref<HTMLElement | null>
+    techstack: Ref<HTMLElement | null>
+    contact: Ref<HTMLElement | null>
 }

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import NavbarLayout from '../layouts/NavbarLayout.vue'
 import HeroSectionLayout from '../layouts/HeroSectionLayout.vue'
 import StatsLayouts from '../layouts/StatsLayouts.vue'
@@ -11,27 +11,33 @@ import RepositorysLayout from '../layouts/RepositorysLayout.vue'
 import CertivLayout from '../layouts/CertivLayout.vue'
 import ClientLayouts from '../layouts/ClientLayouts.vue'
 import ContacLayout from '../layouts/ContacLayout.vue'
+import FooterLayouts from '../layouts/FooterLayouts.vue'
+
+
+
+import {ref} from "vue"
+
 
 </script>
 
 <template>
     <div class="flex flex-col overflow-hidden justify-center items-center">
-        <NavbarLayout />
+        <NavbarLayout :scrol="scrol" />
         <div class="mt-10">
             <HeroSectionLayout />
         </div>
         <div>
             <StatsLayouts />
         </div>
-        <div class="flex gap-48 items-center">
+        <div id="aboutme" class="flex gap-48 items-center">
             <ClaudeMascot />
             <AboutLayout />
         </div>
-        <div class="mt-32 flex justify-center items-center">
+        <div id="tech" class="mt-32 flex justify-center items-center">
             <ToolsTech />
         </div>
-        <div class="flex flex-col justify-center items-center">
-            <TitleProject />
+        <div id="project" class="flex flex-col justify-center items-center">
+            <TitleProject  />
             <Project />
         </div>
         <div class="mt-20">
@@ -43,8 +49,10 @@ import ContacLayout from '../layouts/ContacLayout.vue'
         <div class="mt-20">
             <ClientLayouts />
         </div>
-        <div class="mt-15 border-t border-b p-20 w-full text-center">
-            <ContacLayout />
+        <div class="mt-15 border-t border-b p-20 w-full text-center" id="contact">
+            <ContacLayout  />
+            <FooterLayouts />
+            <p class="mt-10">© 2026 Mipan. All Rights Reserved.</p>
         </div>
     </div>
 </template>
