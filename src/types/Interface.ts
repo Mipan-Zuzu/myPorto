@@ -29,3 +29,16 @@ export interface EventScrol {
     techstack: Ref<HTMLElement | null>
     contact: Ref<HTMLElement | null>
 }
+
+export interface DeskLayout {
+    id: number
+    title: string 
+    status: string 
+    desk: string
+}
+
+export interface RoadmapCards  {
+    id: number
+    status: string
+    title: string
+}

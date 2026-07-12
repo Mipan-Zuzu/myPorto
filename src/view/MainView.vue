@@ -12,6 +12,8 @@ import CertivLayout from '../layouts/CertivLayout.vue'
 import ClientLayouts from '../layouts/ClientLayouts.vue'
 import ContacLayout from '../layouts/ContacLayout.vue'
 import FooterLayouts from '../layouts/FooterLayouts.vue'
+import LernLayout from '../layouts/LernLayout.vue'
+import TitleLern from '../components/TitleLern.vue'
 
 </script>
 
@@ -34,6 +36,8 @@ import FooterLayouts from '../layouts/FooterLayouts.vue'
         <div id="project" class="flex flex-col justify-center items-center">
             <TitleProject  />
             <Project />
+            <TitleLern class="mt-10" />
+            <LernLayout class="mt-4" />
         </div>
         <div class="mt-20">
             <RepositorysLayout />
