@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { UserRound, Book, Laptop, Layers } from "lucide-vue-next"
+import { UserRound, Folder, Laptop, Layers } from "lucide-vue-next"
 import type {CardStats} from "../types/Interface"
 import CardStatsComp from '../components/CardStatsComp.vue'
 
@@ -12,9 +12,9 @@ const stats: CardStats[] = [
     },
     {
         id : 2,
-        rank : "50 +",
-        title : "Repository Github",
-        ico: Book
+        rank : "15 +",
+        title : "Finish Project",
+        ico: Folder
     },
     {
         id : 3,
@@ -25,7 +25,7 @@ const stats: CardStats[] = [
     {
         id : 4,
         rank : "15 +",
-        title : "Tech tools/lang",
+        title : "Technologies",
         ico: Layers
     }
 ]

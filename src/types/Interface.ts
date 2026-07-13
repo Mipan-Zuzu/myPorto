@@ -21,6 +21,7 @@ export interface CardProject {
     desk: string
     category: string[]
     url: string
+    badge: string
 }
 
 export interface EventScrol {

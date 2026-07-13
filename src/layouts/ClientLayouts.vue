@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import StartUi from '../ui/StartUi.vue'
 import SelectButton from 'primevue/selectbutton';
-
 import { ref, watch } from 'vue';
 
 const localLang = localStorage.getItem("lang")
@@ -57,12 +55,15 @@ const data = [
     </div>
     <div class="flex flex-col gap-5 justify-center mt-10">
         <div class="grid grid-cols-1 gap-2 md:grid-cols-3 ml-2 mr-2">
-            <div class="flex flex-col border rounded-2xl p-3 border-b-4 rounded-r-none rounded-b-2xl hover:scale-105 duration-300 bg-white hover:z-40"
+            <div class="flex flex-col h-80 border rounded-2xl p-3 border-b-4 rounded-r-none rounded-b-2xl hover:scale-105 duration-300 bg-white hover:z-40"
                 v-for="(item, index) in data" :key="index">
                 <div class="">
                     <div class="flex justify-between items-center">
-                        <StartUi />
-                        <h1 class="text-2xl gradentText font-bold">{{ item.star }}</h1>
+                        <p class="text-6xl gradentText">❝</p>
+                        <div class="text-2xl text-stone-700 p-1 px-2 font-bold border rounded-md flex gap-1">
+                            <p class="gradentText">⭐</p>
+                            <p>{{ item.star }}</p>
+                        </div>
                     </div>
                     <div class="mt-3 text-stone-500 font-light" v-html="value === 'eng'? item.desk : item.deskIndo"></div>
                     <div class="flex gap-3 mt-5">

@@ -62,7 +62,7 @@ const data = {
             <img class=" -rotate-3 w-8 h-8 md:w-10 md:h-10" :src="`${data.tech}typescript`" alt="">
             <h1 class=" text-sky-700 font-semibold md:text-xl">Intermediate</h1>
         </div>
-        <img class="w-64  h-64 rounded-full md:w-100 md:h-100" :src="data.profile" alt=""   fetchpriority="high">
+        <img class="w-64  h-64 rounded-full md:w-80 md:h-80" :src="data.profile" alt=""   fetchpriority="high">
         <div class="absolute animate-bounce px-3 flex items-center gap-2 backdrop-blur-md shadow-2xl p-1 rounded-2xl">
             <img class=" -rotate-3  w-8 h-8 md:w-10 md:h-10" :src="`${data.tech}javascript`" alt="">
             <h1 class=" text-stone-700 font-semibold md:text-xl md:px-5">Expert</h1>

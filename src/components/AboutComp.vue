@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div class="flex gap-2 items-start  justify-start flex-col w-72 text-3xl font-bold gradentText mt-20 md:text-5xl md:w-96">
+    <div class="flex gap-5 items-start  justify-start flex-col w-72 text-3xl font-bold gradentText mt-20 md:text-5xl md:w-96">
         <p class="text-xl font-bold text-stone-500">About Me</p>
         <h1 class="text-5xl">Im A Full Stack Web <span class="text-stone-500">Developer</span></h1>
         <div class="block">
