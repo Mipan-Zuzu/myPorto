@@ -12,7 +12,7 @@ const stats: CardStats[] = [
     },
     {
         id : 2,
-        rank : "15 +",
+        rank : "13 +",
         title : "Finish Project",
         ico: Folder
     },

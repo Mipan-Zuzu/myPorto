@@ -2,7 +2,7 @@
 
 const url = "https://skillicons.dev/icons?i="
 
-const stacks = ["VueJs", "Golang", "React", "Express", "TypeScript", "Redis", "MongoDB", "Postgres", "CloudFlare"]
+const stacks = ["VueJs", "Golang", "React", "Express", "TypeScript", "Redis", "MongoDB", "Postgres", "CloudFlare", "docker", "pinia", "redux"]
 
 </script>
 
