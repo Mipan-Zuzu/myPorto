@@ -103,6 +103,17 @@ const CardDat: CardProject[] = [
         url: "https://www.npmjs.com/package/sukiss",
         badge: "https://img.shields.io/npm/dm/gaman"
     },
+    {
+        status: "DONE",
+        date: "Build November 14 , 2025",
+        condition: true,
+        img: "",
+        titles: "MailSend",
+        desk: "A Simple mail sender easy to use using nodemailer",
+        category: ["Node", "Mail", "SMTP"],
+        url: "https://github.com/Mipan-Zuzu/emailSender",
+        badge: ""
+    },
 ]
 </script>
 
