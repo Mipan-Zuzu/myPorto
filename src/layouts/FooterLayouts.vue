@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import FooterContacComp from '../components/FooterContacComp.vue'
+import FooterContacComp from "../components/FooterContacComp.vue"
 import { Icon } from "@iconify/vue"
 
 import instagram from "@iconify-icons/simple-icons/instagram"

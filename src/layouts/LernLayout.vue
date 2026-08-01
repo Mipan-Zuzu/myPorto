@@ -20,13 +20,13 @@ const data: DeskLayout[] = [
     {
         id: 3,
         title: "Network",
-        status: "PROGRESS",
+        status: "DONE",
         desk: "Docker Network is a virtual network that enables communication between containers and external services."
     },
     {
         id: 4,
         title: "Compose",
-        status: "PENDING",
+        status: "DONE",
         desk: "Docker Compose is a tool for defining and managing multi container applications using a YAML file."
     },
 
@@ -52,7 +52,7 @@ const data: DeskLayout[] = [
     {
         id: 8,
         title: "n8n",
-        status: "PENDING",
+        status: "DONE",
         desk: "n8n is a workflow automation platform for connecting apps, APIs, and services without manual coding."
     },
 
@@ -61,7 +61,7 @@ const data: DeskLayout[] = [
 const card: RoadmapCards[] = [
     {
         id: 1,
-        status: "PROGRESS",
+        status: "DONE",
         title: "Docker"
     },
     {
@@ -71,7 +71,7 @@ const card: RoadmapCards[] = [
     },
     {
         id: 3,
-        status: "PENDING",
+        status: "DONE",
         title: "Automation"
     },
 ]
@@ -122,14 +122,14 @@ const card: RoadmapCards[] = [
                         <TitleCard :title="data[1].title" :status="data[1].status" :desk="data[1].desk" />
                     </div>
                     <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
-                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-yellow-500"></p>
-                        <p class="w-2 h-2 rounded-full bg-yellow-500"></p>
+                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-green-500"></p>
+                        <p class="w-2 h-2 rounded-full bg-green-500"></p>
                         <h1>Network</h1>
                         <TitleCard :title="data[2].title" :status="data[2].status" :desk="data[2].desk" />
                     </div>
                     <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
-                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-gray-500"></p>
-                        <p class="w-2 h-2 rounded-full bg-gray-500"></p>
+                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-green-500"></p>
+                        <p class="w-2 h-2 rounded-full bg-green-500"></p>
                         <h1>Compose</h1>
                         <TitleCard :title="data[3].title" :status="data[3].status" :desk="data[3].desk" />
                     </div>
@@ -155,8 +155,8 @@ const card: RoadmapCards[] = [
                     </div>
                 </div>
                 <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
-                    <p class="w-2 h-2 animate-ping absolute rounded-full bg-gray-500"></p>
-                    <p class="w-2 h-2 rounded-full bg-gray-500"></p>
+                    <p class="w-2 h-2 animate-ping absolute rounded-full bg-green-500"></p>
+                    <p class="w-2 h-2 rounded-full bg-green-500"></p>
                     <h1>n8n</h1>
                     <TitleCard :title="data[7].title" :status="data[7].status" :desk="data[7].desk" />
                 </div>
