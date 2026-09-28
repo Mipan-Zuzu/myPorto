@@ -52,9 +52,9 @@ const CardDat: CardProject[] = [
         status: "Done",
         date: "Build February 15, 2026",
         condition: true,
-        img: "https://res.cloudinary.com/fwkoz9yt/image/upload/v1783910533/3bdbe1e5-b615-4736-b7b1-15d8b41a8f50.png",
+        img: "https://res.cloudinary.com/fwkoz9yt/image/upload/v1790584779/Screenshot_2026-09-28_163921_lnfgxs.png",
         titles: "Portofolio",
-        desk: "Client Project Portofolio using AI integreation Groq Model",
+        desk: "Client Project Portofolio use sticky scroll, scrol driven animation, and using AI integration",
         category: ["Portofolio", "Client", "AI"],
         url: "https://jhondoe.my.id/",
         badge: ""

@@ -13,6 +13,7 @@
     "@iconify/vue": "^5.0.1",
     "@primeuix/themes": "^2.0.3",
     "@tailwindcss/vite": "^4.3.2",
+    "@unhead/vue": "^3.4.1",
     "ky": "^2.0.2",
     "lucide-vue-next": "^1.0.0",
     "primevue": "^4.5.5",
