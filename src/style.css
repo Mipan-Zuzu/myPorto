@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @reference "tailwindcss";
 
+/* main.css atau style.css */
+@layer base {
+  ::selection {
+    @apply bg-stone-800 text-white;
+  }
+}
+
 body {font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;  
@@ -130,4 +137,48 @@ body {font-family: "Poppins", sans-serif;
 
 .textT {
   @apply  bg-gradient-to-r from-sky-400 to-violet-400 text-white
+}
+
+@keyframes scroll-reveal-up {
+  from { opacity: 0; transform: translateY(2.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scroll-reveal-left {
+  from { opacity: 0; transform: translateX(-2.5rem); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scroll-reveal-right {
+  from { opacity: 0; transform: translateX(2.5rem); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scroll-reveal-scale {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.scroll-reveal-up,
+.scroll-reveal-left,
+.scroll-reveal-right,
+.scroll-reveal-scale {
+  animation-duration: 900ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+  will-change: opacity, transform;
+}
+
+.scroll-reveal-up { animation-name: scroll-reveal-up; }
+.scroll-reveal-left { animation-name: scroll-reveal-left; }
+.scroll-reveal-right { animation-name: scroll-reveal-right; }
+.scroll-reveal-scale { animation-name: scroll-reveal-scale; }
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal-up,
+  .scroll-reveal-left,
+  .scroll-reveal-right,
+  .scroll-reveal-scale {
+    animation-duration: 400ms;
+  }
 }

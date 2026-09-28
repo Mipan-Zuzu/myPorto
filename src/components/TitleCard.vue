@@ -14,7 +14,7 @@
 
 <template>
     <div
-        class="hidden absolute ml-30  p-2 rounded-md border rounded-l-none md:grid-cols-1 rounded-b-md group-hover:block">
+        class="hidden absolute ml-30  p-2 rounded-md border rounded-l-none md:grid-cols-1 rounded-b-md group-hover:block bg-white">
         <div class="flex gap-2">
             <h1>{{ props.title }}</h1>
             <div class="flex gap-1 items-center">

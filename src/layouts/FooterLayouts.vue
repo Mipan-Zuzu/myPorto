@@ -53,7 +53,7 @@ const icon = [
             <div class="text-start">
                 <h1 class="text-sm font-light text-stone-500 md:w-100">{{ data.desk }}</h1>
             </div>
-            <div class="flex gap-4">
+            <div class="flex gap-4 absolute mt-40">
                 <a v-for="(item, index) in icon" :key="index" :href="item.url" class="group text-stone-600 flex rounded-sm hover:gap-2 duration-300 hover:border hover:rounded-md p-0.5" :title="item.title">
                     <Icon :icon="item.icon" class="text-2xl" />
                     <p class="hidden font-medium opacity-0 group-hover:block duration-300 group-hover:opacity-100">{{ item.title }}</p>

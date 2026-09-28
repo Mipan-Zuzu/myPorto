@@ -56,7 +56,7 @@ const CardDat: CardProject[] = [
         titles: "Portofolio",
         desk: "Client Project Portofolio using AI integreation Groq Model",
         category: ["Portofolio", "Client", "AI"],
-        url: "https://porto.jhondoe.my.id/",
+        url: "https://jhondoe.my.id/",
         badge: ""
     },
     {
@@ -67,7 +67,7 @@ const CardDat: CardProject[] = [
         titles: "Portofolio IT Support",
         desk: "Profesional Portofolio for IT Support ",
         category: ["Portofolio", "IT Support"],
-        url: "https://davidtaufik.mipandev.my.id/",
+        url: "https://davidtaufik.my.id/",
         badge: ""
     },
     {
@@ -114,13 +114,35 @@ const CardDat: CardProject[] = [
         url: "https://github.com/Mipan-Zuzu/emailSender",
         badge: ""
     },
+    {
+        status: "DONE",
+        date: "Build September 07 , 2026",
+        condition: true,
+        img: "https://raw.githubusercontent.com/Mipan-Zuzu/Nyra/main/asset/Nyravid.gif",
+        titles: "Nyra",
+        desk: "Nyra is Asisten 3d anime in your desktop (same like vtuber) and my bini",
+        category: ["ElectronJs", "Ai Asissiten"],
+        url: "https://github.com/Mipan-Zuzu/Nyra",
+        badge: "https://img.shields.io/badge/Nyra-AI%20VTuber%20Assistant-ff69b4?style=for-the-badge"
+    },
+    {
+        status: "Learn",
+        date: "Build September 23 , 2026",
+        condition: true,
+        img: "",
+        titles: "Hermes Agent",
+        desk: "I Lern How to Build automation Flow using Hermes Agen Connect other MCP for supported automation.",
+        category: ["Hermes", "Agent", "MCP"],
+        url: "",
+        badge: ""
+    },
 ]
 </script>
 
 <template>
     <div class="grid grid-cols-1 justify-center gap-2 md:grid-cols-3">
         <a v-for="(items, index) in CardDat" :key="index" :href="items.url" target="_blank" rel="noopener noreferrer"
-            class="p-6 ml-3 mr-3 rounded-xl border-2 border-stone-200 hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden"
+            class="p-6 ml-3 mr-3 rounded-xl border-2 border-stone-200 backdrop-blur-lg hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden"
             style="opacity: 1; transform: none; transform-origin: 50% 50% 0px;">
             <div class="mb-6 w-full h-40 rounded-lg overflow-hidden bg-gray-200">
                 <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"

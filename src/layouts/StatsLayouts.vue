@@ -6,7 +6,7 @@ import CardStatsComp from '../components/CardStatsComp.vue'
 const stats: CardStats[] = [
     {
         id : 1,
-        rank : "3 +",
+        rank : "4 +",
         title : "Clients Served",
         ico: UserRound
     },
@@ -35,18 +35,13 @@ const stats: CardStats[] = [
 <template>
     <div class="flex flex-col gap-5 justify-center items-center mt-20">
         <div class="flex flex-col gap-5 md:flex-row ">
-            <div class="flex hover:scale-105 duration-300 hover: flex-col items-center bg-white font-extrabold text-stone-500 p-10 border rounded-2xl" v-for="stat in stats" :key="stat.id">
+            <div class="flex hover:scale-105 duration-300 flex-col items-center bg-white font-extrabold text-stone-500 p-10 border rounded-2xl" v-for="stat in stats" :key="stat.id">
                 <CardStatsComp 
                     :ico="stat.ico"
                     :rank="stat.rank"
                     :title="stat.title"
                 />
             </div>
-            </div>
-        </div>
-        <div class="flex flex-col">
-            <div class="">
-                
             </div>
         </div>
 </template>

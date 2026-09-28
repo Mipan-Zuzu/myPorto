@@ -1,14 +1,18 @@
 <script setup>
-import { ref, onMounted, watchEffect } from "vue"
-import {StickyNote} from "lucide-vue-next"
+import { ref, onMounted } from "vue"
+import { StickyNote } from "lucide-vue-next"
 import Typed from "typed.js"
 import cv from "../assets/cv/CV.pdf"
+
 const el = ref()
-const result = ref()
 
 onMounted(() => {
     new Typed(el.value, {
-        strings: ["Fullstack dev", "System design", "system architecture ✨"],
+        strings: [
+            "Fullstack dev",
+            "System design",
+            "System architecture ✨"
+        ],
         typeSpeed: 50,
         backSpeed: 30,
         smartBackspace: true,
@@ -19,54 +23,157 @@ onMounted(() => {
 const urlWaMe = "https://wa.me/62881037637602"
 
 const data = {
-    waving: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png",
-    tech : "https://skillicons.dev/icons?i=",
-    profile : "https://avatars.githubusercontent.com/u/194325824?v=4"
-}
+    waving:
+        "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png",
 
+    tech: "https://skillicons.dev/icons?i=",
+
+    profile:
+        "https://avatars.githubusercontent.com/u/194325824?v=4",
+}
 </script>
 
 <template>
-    <div class="flex flex-col justify-center mt-20  items-center gap-17 md:flex-row">
-    <div class="flex flex-col mt-10 ml-2 md:ml-5">
-        <div class="flex flex-col">
-            <p class="w-38 pl-2 mb-5 rounded-md text-lg rotate-3 p-1 bg-sky-300 font-medium text-white animate-pulse">Experience ++</p>
-            <h1
-                class="text-5xl font-extrabold gradentTextv2 md:text-7xl">
-                HEY THERE
-            </h1><br>
-            <div class="flex">
-                <h1 class="gradentTextv2 text-5xl font-extrabold md:text-6xl">I'M <span class="text-stone-600">SAKA</span></h1>
-             <img class="w-10 h-10" :src="data.waving" alt="">
+    <section
+        class="relative w-full overflow-hidden px-5 py-16 sm:px-8 md:px-10 lg:px-16 flex justify-center"
+    >
+        <div
+            class="mx-auto flex w-full max-w-5xl flex-col justify-center items-center gap-5 md:flex-row"
+        >
+            <div
+                class="relative flex w-full max-w-2xl flex-col items-start"
+            >
+
+                <!-- Experience -->
+                <p
+                    class="mb-5 rotate-3 rounded-md bg-sky-300 px-3 py-1 text-base font-medium text-white sm:text-lg"
+                >
+                    Experience ++
+                </p>
+
+                <!-- Heading -->
+                <div class="flex flex-col">
+
+                    <h1
+                        class="text-6xl font-extrabold leading-none text-sky-500 sm:text-5xl md:text-6xl lg:text-7xl"
+                    >
+                        HEY
+                        <span class="text-violet-300">
+                            THERE
+                        </span>
+                    </h1>
+
+                    <div
+                        class="mt-3 flex items-center gap-2 sm:gap-3"
+                    >
+                        <h1
+                            class="text-6xl font-extrabold leading-none text-stone-600 sm:text-5xl md:text-6xl"
+                        >
+                            I'M SAKA
+                        </h1>
+
+                        <img
+                            class="h-8 w-8 shrink-0 sm:h-10 sm:w-10"
+                            :src="data.waving"
+                            alt="Waving hand"
+                        />
+                    </div>
+                </div>
+
+                <!-- Typed -->
+                <div class="mt-6 min-h-8">
+                    <span
+                        ref="el"
+                        class="text-lg font-semibold gradentText sm:text-xl md:text-2xl"
+                    ></span>
+                </div>
+
+                <!-- Description -->
+                <div
+                    class="mt-6 max-w-xl text-lg font-normal leading-relaxed text-stone-600 sm:text-lg md:text-xl"
+                >
+                    <p>
+                        Specializing in web infrastructure, authentication,
+                        monitoring systems, and scalable backend APIs.
+                    </p>
+                </div>
+
+                <!-- Buttons -->
+                <div
+                    class="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
+                >
+                    <a
+                        target="_blank"
+                        :href="cv"
+                        download="Isaka-cv.pdf"
+                        class="w-full rounded-lg bg-sky-500 px-7 py-3 text-center text-base font-semibold text-white transition hover:bg-blue-300 sm:w-auto sm:text-lg"
+                    >
+                        View Resume
+                    </a>
+
+                    <a
+                        target="_blank"
+                        :href="urlWaMe"
+                        class="w-full rounded-lg border border-stone-500 px-7 py-3 text-center text-base font-semibold text-stone-500 transition hover:bg-purple-400 hover:text-white sm:w-auto sm:text-lg"
+                    >
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="relative flex w-full max-w-md items-center justify-center md:max-w-lg"
+            >
+
+                <!-- Profile wrapper -->
+                <div
+                    class="relative flex items-center justify-center"
+                >
+
+                    <!-- TypeScript badge -->
+                    <div
+                        class="absolute -right-2 -top-8 z-10 flex items-center gap-2 rounded-2xl border border-white/40 bg-white/50 px-2 py-1.5 shadow-lg backdrop-blur-md sm:-right-8 sm:-top-5 md:-right-12 animate-bounce"
+                    >
+                        <img
+                            class="h-7 w-7 sm:h-9 sm:w-9"
+                            :src="`${data.tech}typescript`"
+                            alt="TypeScript"
+                        />
+
+                        <span
+                            class="text-sm font-semibold text-sky-700 sm:text-base md:text-xl"
+                        >
+                            Intermediate
+                        </span>
+                    </div>
+
+                    <!-- Profile -->
+                    <img
+                        class="h-56 w-56 rounded-full object-cover sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80"
+                        :src="data.profile"
+                        alt="Profile"
+                        fetchpriority="high"
+                    />
+
+                    <!-- JavaScript badge -->
+                    <div
+                        class="absolute -bottom-8 -left-2 z-10 flex items-center gap-2 rounded-2xl border border-white/40 bg-white/50 px-2 py-1.5 shadow-lg backdrop-blur-md sm:-bottom-5 sm:-left-8 md:-left-12 animate-bounce"
+                    >
+                        <img
+                            class="h-7 w-7 sm:h-9 sm:w-9"
+                            :src="`${data.tech}javascript`"
+                            alt="JavaScript"
+                        />
+
+                        <span
+                            class="text-sm font-semibold text-stone-700 sm:text-base md:px-2 md:text-xl"
+                        >
+                            Expert
+                        </span>
+                    </div>
+
+                </div>
             </div>
         </div>
-        <div class="mt-3">
-            <span ref="el" class="text-xl font-semibold gradentText md:text-2xl"></span>
-        </div>
-        <div class="mt-10 font-normal text-stone-400">
-            <p class="w-75 text-xl md:w-100 md:text-xl">Specializing in web <span class="bg-red-500 text-white">infrastructure</span>, authentication, monitoring systems, and <span class="bg-red-500 text-white">scalable</span> backend APIs.</p>
-        </div>
-        <div class="flex flex-col mt-5 gap-3 md:flex-row">
-        <div class="flex justify-start gap-2 ">
-            <a target="_blank" :href="cv" class="p-3 px-8 bg-stone-700 text-white text-xl font-semibold rounded-lg hover:bg-stone-600" download="Isaka-cv.pdf">View Resume</a>
-        </div>
-        <div class="flex justify-start gap-2">
-            <a target="_blank" :href="urlWaMe" class="p-3 px-10 border border-stone-500 text-stone-500 text-xl font-semibold rounded-lg">Contact Me</a>
-        </div>
-        </div>
-        <div class="absolute w-72 p-2 bg-linear-to-r from-sky-500 via-violet-500 to-pink-500 blur-2xl">
-        </div>
-    </div>
-    <div class="">
-        <div class="absolute animate-bounce right-14 flex items-center gap-2 backdrop-blur-lg p-1 rounded-2xl md:right-60">
-            <img class=" -rotate-3 w-8 h-8 md:w-10 md:h-10" :src="`${data.tech}typescript`" alt="">
-            <h1 class=" text-sky-700 font-semibold md:text-xl">Intermediate</h1>
-        </div>
-        <img class="w-64  h-64 rounded-full md:w-80 md:h-80" :src="data.profile" alt=""   fetchpriority="high">
-        <div class="absolute animate-bounce px-3 flex items-center gap-2 backdrop-blur-md shadow-2xl p-1 rounded-2xl">
-            <img class=" -rotate-3  w-8 h-8 md:w-10 md:h-10" :src="`${data.tech}javascript`" alt="">
-            <h1 class=" text-stone-700 font-semibold md:text-xl md:px-5">Expert</h1>
-        </div>
-        </div>
-    </div>
+    </section>
 </template>

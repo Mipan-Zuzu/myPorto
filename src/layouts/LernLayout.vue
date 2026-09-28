@@ -55,6 +55,42 @@ const data: DeskLayout[] = [
         status: "DONE",
         desk: "n8n is a workflow automation platform for connecting apps, APIs, and services without manual coding."
     },
+    {
+        id: 9,
+        title: "Performance & Traffic",
+        status: "PROGRESS",
+        desk: "The process of controlling and distributing incoming requests to maintain application stability, responsiveness, and availability under different traffic conditions."
+    },
+    {
+        id: 10,
+        title: "Caching",
+        status: "DONE",
+        desk: "A technique that stores frequently accessed data in faster storage to reduce repeated processing, lower database load, and improve response time."
+    },
+    {
+        id: 11,
+        title: "Security",
+        status: "PROGRESS",
+        desk: "The practices and mechanisms used to protect applications, APIs, users, and data from unauthorized access, attacks, and other security threats."
+    },
+    {
+        id: 12,
+        title: "Reliability",
+        status: "PROGRESS",
+        desk: "The ability of an application to continue functioning correctly and recover gracefully when errors, failures, or unexpected conditions occur."
+    },
+    {
+        id: 13,
+        title: "Scalability",
+        status: "PROGRESS",
+        desk: "The ability of an application to handle increasing users, requests, and data by efficiently adding or improving computing resources."
+    },
+    {
+        id: 14,
+        title: "Observability",
+        status: "PROGRESS",
+        desk: "The ability to understand an application's internal state and behavior through logs, metrics, traces, monitoring, and other operational data."
+    },
 
 ]
 
@@ -73,6 +109,21 @@ const card: RoadmapCards[] = [
         id: 3,
         status: "DONE",
         title: "Automation"
+    },
+    {
+        id: 4,
+        status: "PROGRESS",
+        title: "System Quality"
+    },
+    {
+        id: 5,
+        status: "PROGRESS",
+        title: "Performance & Traffic"
+    },
+    {
+        id: 6,
+        status: "PROGRESS",
+        title: "Deployment & Infrastructure"
     },
 ]
 </script>
@@ -97,9 +148,23 @@ const card: RoadmapCards[] = [
 
                 </div>
 
+
+                <RoadmapCard :status="card[4].status" :title="card[4].title" />
+                <div class="p-1 px-3 ml-20 h-31 border-l-2 border-blue-500">
+
+                </div>
+                <RoadmapCard :status="card[3].status" :title="card[3].title" />
+
+                <div class="p-1 px-3 ml-20 h-31 border-l-2 border-blue-500">
+
+                </div>
                 <RoadmapCard :status="card[2].status" :title="card[2].title" />
             </div>
-            <div class="flex flex-col gap-37 mt-4">
+            <div class="flex flex-col gap-38 mt-6">
+                <div class="p-2 border-b-2 px-2  border-gray-400 md:px-7">
+                </div>
+                <div class="p-2 border-b-2 px-2  border-gray-400 md:px-7">
+                </div>
                 <div class="p-2 border-b-2 px-2  border-gray-400 md:px-7">
                 </div>
                 <div class="p-2 border-b-2 px-2  border-gray-400 md:px-7">
@@ -107,7 +172,7 @@ const card: RoadmapCards[] = [
                 <div class="p-2 border-b-2 px-2  border-gray-400 md:px-7">
                 </div>
             </div>
-            <div class="grid grid-cols-1 gap-5 mt-2">
+            <div class="grid grid-cols-1 gap-10">
                 <div class="grid grid-cols-1 gap-3 items-end border-l-2 border-gray-400 rounded-md p-1">
                     <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
                         <p class="w-2 h-2 animate-ping absolute rounded-full bg-green-500"></p>
@@ -152,6 +217,46 @@ const card: RoadmapCards[] = [
                         <p class="w-2 h-2 rounded-full bg-yellow-500"></p>
                         <h1>CleanArch</h1>
                         <TitleCard :title="data[6].title" :status="data[6].status" :desk="data[6].desk" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-3 items-end border-l-2 border-gray-400 rounded-md p-1">
+                    <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
+                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-yellow-500"></p>
+                        <p class="w-2 h-2 rounded-full bg-yellow-500"></p>
+                        <h1>traffic management</h1>
+                        <TitleCard :title="data[8].title" :status="data[8].status" :desk="data[8].desk" />
+                    </div>
+                    <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
+                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-green-500"></p>
+                        <p class="w-2 h-2 rounded-full bg-green-500"></p>
+                        <h1>caching</h1>
+                        <TitleCard :title="data[9].title" :status="data[9].status" :desk="data[9].desk" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-3 items-end border-l-2 border-gray-400 rounded-md p-1">
+                    <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
+                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-yellow-500"></p>
+                        <p class="w-2 h-2 rounded-full bg-yellow-500"></p>
+                        <h1>Security</h1>
+                        <TitleCard :title="data[10].title" :status="data[10].status" :desk="data[10].desk" />
+                    </div>
+                    <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
+                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-yellow-500"></p>
+                        <p class="w-2 h-2 rounded-full bg-yellow-500"></p>
+                        <h1>Reliability</h1>
+                        <TitleCard :title="data[11].title" :status="data[11].status" :desk="data[11].desk" />
+                    </div>
+                    <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
+                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-yellow-500"></p>
+                        <p class="w-2 h-2 rounded-full bg-yellow-500"></p>
+                        <h1>Scalability</h1>
+                        <TitleCard :title="data[12].title" :status="data[12].status" :desk="data[12].desk" />
+                    </div>
+                    <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
+                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-yellow-500"></p>
+                        <p class="w-2 h-2 rounded-full bg-yellow-500"></p>
+                        <h1>Observability</h1>
+                        <TitleCard :title="data[13].title" :status="data[13].status" :desk="data[13].desk" />
                     </div>
                 </div>
                 <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
