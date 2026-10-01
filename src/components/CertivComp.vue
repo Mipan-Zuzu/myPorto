@@ -75,6 +75,8 @@ const resetZoom = (): void => {
         <img
           :src="item"
           :alt="`Certificate ${index + 1}`"
+          loading="lazy"
+          decoding="async"
           class="
             block
             h-auto

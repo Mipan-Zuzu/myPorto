@@ -17,6 +17,7 @@ export interface CardProject {
     date: string
     condition: boolean
     img: string
+    mediaType?: "image" | "video"
     titles : string
     desk: string
     category: string[]

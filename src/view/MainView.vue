@@ -62,7 +62,6 @@ const scrollAnimation = {
                     font-black
                     tracking-[-0.08em]
                     [-webkit-text-stroke:1px_#e0f2fe]
-                    opacity-50
                     sm:text-[clamp(1rem,6vw,6rem)]
                     md:text-[clamp(2rem,6vw,6rem)]
                     lg:text-[clamp(2rem,7vw,7rem)]

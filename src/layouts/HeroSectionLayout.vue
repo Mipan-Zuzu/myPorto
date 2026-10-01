@@ -23,13 +23,8 @@ onMounted(() => {
 const urlWaMe = "https://wa.me/62881037637602"
 
 const data = {
-    waving:
-        "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png",
-
-    tech: "https://skillicons.dev/icons?i=",
-
-    profile:
-        "https://avatars.githubusercontent.com/u/194325824?v=4",
+    waving: "/assets/img/waving-hand.png",
+    profile: "/assets/img/profile.jpg",
 }
 </script>
 
@@ -138,7 +133,7 @@ const data = {
                     >
                         <img
                             class="h-7 w-7 sm:h-9 sm:w-9"
-                            :src="`${data.tech}typescript`"
+                            src="/assets/img/typescript.svg"
                             width="36"
                             height="36"
                             alt="TypeScript"
@@ -154,7 +149,7 @@ const data = {
                     <!-- Profile -->
                     <img
                         class="h-56 w-56 rounded-full object-cover sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80"
-                        :src="`${data.profile}&s=320`"
+                        :src="data.profile"
                         width="320"
                         height="320"
                         alt="Profile"
@@ -167,7 +162,7 @@ const data = {
                     >
                         <img
                             class="h-7 w-7 sm:h-9 sm:w-9"
-                            :src="`${data.tech}javascript`"
+                            src="/assets/img/javascript.svg"
                             width="36"
                             height="36"
                             alt="JavaScript"

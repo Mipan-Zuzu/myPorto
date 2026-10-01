@@ -13,8 +13,8 @@ const urlWaMe = "https://wa.me/62881037637602"
 
 const navbar = ref(false)
 const data = {
-    img: "https://raw.githubusercontent.com/Mipan-Zuzu/Mipan-Zuzu/main/icon.png",
-    profile: "https://avatars.githubusercontent.com/u/194325824?v=4",
+    img: "https://raw.githubusercontent.com/Mipan-Zuzu/Mipan-Zuzu/refs/heads/main/icon.png",
+    profile: "/assets/img/profile.jpg",
     name: "saka",
     navigation: {
         about: "About Me",
@@ -56,7 +56,7 @@ onBeforeUnmount(() => {
     <div
         class="fixed w-full flex justify-between text-sm p-1 ml-1 menu border-stone-400 backdrop-blur-lg z-50 shadow-[0_0_30px_rgba(255,255,255,10)]">
         <div>
-            <img class="w-16" :src="data.img" alt="mipan">
+            <img class="w-16" :src="data.img" alt="mipan" fetchpriority="high">
         </div>
         <div class="items-center text-stone-700 font-medium gap-10 hidden md:flex">
             <button class="cursor-pointer hover:text-stone-900 duration-300" @click="handlerScrol('aboutme')">{{ data.navigation.about }}</button>
@@ -67,7 +67,7 @@ onBeforeUnmount(() => {
         <div class="mr-5 md:mr-10">
             <button @click="handleNavigationBar" aria-label="close menu" class="flex gap-1 items-center">
                 <ChevronDown class="w-3 h-3" aria-hidden="true" />
-                <img class="w-10 rounded-full" :src="data.profile" alt="profile_picture" aria-hidden="true">
+                <img class="w-10 rounded-full" :src="data.profile" fetchpriority="high" alt="profile_picture" aria-hidden="true">
             </button>
             <div :class="navbar
                 ? 'opacity-100 pointer-events-auto transition-opacity duration-100'

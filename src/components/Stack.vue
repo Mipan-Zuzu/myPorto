@@ -1,8 +1,10 @@
 <script setup lang="ts">
 
-const url = "https://skillicons.dev/icons?i="
+const iconBaseUrl = "https://skillicons.dev/icons?i="
 
 const stacks = ["VueJs", "Golang", "React", "Express", "TypeScript", "Redis", "MongoDB", "Postgres", "CloudFlare", "docker", "pinia", "redux"]
+
+const getIconUrl = (stack: string): string => `${iconBaseUrl}${stack.toLowerCase()}`
 
 </script>
 
@@ -17,7 +19,7 @@ const stacks = ["VueJs", "Golang", "React", "Express", "TypeScript", "Redis", "M
         >
             <div class="absolute left-0 bottom-0 w-4 h-4 -translate-x-1/2 translate-y-1/2 rounded-full bg-stone-800 scale-0 transition-transform duration-500 ease-in-out group-hover:scale-[15] z-0"></div>
 
-            <img class="w-14 h-14 relative z-10 transition-colors duration-300" :src="`${url}${stack.toLowerCase()}`" alt="">
+            <img class="w-14 h-14 relative z-10 transition-colors duration-300" :src="getIconUrl(stack)" alt="" loading="lazy" decoding="async">
             <h1 class="text-sm font-normal relative z-10 transition-colors duration-300 group-hover:text-white">
                 {{ stack }}
             </h1>

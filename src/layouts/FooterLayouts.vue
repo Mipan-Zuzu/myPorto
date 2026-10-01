@@ -47,7 +47,7 @@ const icon = [
     <div class="mt-30 flex flex-col gap-30 md:flex-row md:justify-between md:gap-0 md:items-center">
         <div class="flex flex-col gap-3">
             <div class="flex gap-3 items-center">
-                <img class="w-14 h-10" :src="data.imgUrl" alt="profile">
+                <img class="w-14 h-10" :src="data.imgUrl" alt="profile" width="56" height="40" loading="lazy" decoding="async">
                 <h1 class="font-bold text-2xl text-stone-500">{{ data.name }}</h1>
             </div>
             <div class="text-start">

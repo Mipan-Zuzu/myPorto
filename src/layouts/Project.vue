@@ -41,7 +41,7 @@ const CardDat: CardProject[] = [
         status: "Progress",
         date: "Build July 07, 2026",
         condition: false,
-        img: "",
+        img: "/assets/img/pulsr.gif",
         titles: "Pulsr",
         desk: "Pulsr is an all in one SaaS monitoring platform. Monitor all your systems from a single dashboard with health checks, logs, metrics, and real-time insights.",
         category: ["Monitoring", "Golang", "SaaS"],
@@ -107,7 +107,7 @@ const CardDat: CardProject[] = [
         status: "DONE",
         date: "Build November 14 , 2025",
         condition: true,
-        img: "",
+        img: "https://res.cloudinary.com/fwkoz9yt/image/upload/v1790834106/mailSend_sql2yu.png",
         titles: "MailSend",
         desk: "A Simple mail sender easy to use using nodemailer",
         category: ["Node", "Mail", "SMTP"],
@@ -118,7 +118,8 @@ const CardDat: CardProject[] = [
         status: "DONE",
         date: "Build September 07 , 2026",
         condition: true,
-        img: "https://raw.githubusercontent.com/Mipan-Zuzu/Nyra/main/asset/Nyravid.gif",
+        img: "/assets/img/nyra-preview.webm",
+        mediaType: "video",
         titles: "Nyra",
         desk: "Nyra is Asisten 3d anime in your desktop (same like vtuber) and my bini",
         category: ["ElectronJs", "Ai Asissiten"],
@@ -129,7 +130,7 @@ const CardDat: CardProject[] = [
         status: "Learn",
         date: "Build September 23 , 2026",
         condition: true,
-        img: "",
+        img: "/assets/img/hermes.gif",
         titles: "Hermes Agent",
         desk: "I Lern How to Build automation Flow using Hermes Agen Connect other MCP for supported automation.",
         category: ["Hermes", "Agent", "MCP"],
@@ -145,11 +146,22 @@ const CardDat: CardProject[] = [
             class="p-6 ml-3 mr-3 rounded-xl border-2 border-stone-200 backdrop-blur-lg hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden"
             style="opacity: 1; transform: none; transform-origin: 50% 50% 0px;">
             <div class="mb-6 w-full h-40 rounded-lg overflow-hidden bg-gray-200">
-                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                <video v-if="items.mediaType === 'video'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    :src="items.img"
+                    width="400"
+                    height="160"
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    preload="none"
+                    :aria-label="items.titles"></video>
+                <img v-else class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     :src="items.img.includes('cloudinary') ? items.img.replace('/upload/', '/upload/f_auto,q_auto,w_400,h_160,c_fill/') : items.img"
                     width="400"
                     height="160"
                     loading="lazy"
+                    decoding="async"
                     :alt="items.titles">
             </div>
             <div>
