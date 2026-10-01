@@ -75,6 +75,8 @@ const data = {
                         <img
                             class="h-8 w-8 shrink-0 sm:h-10 sm:w-10"
                             :src="data.waving"
+                            width="40"
+                            height="40"
                             alt="Waving hand"
                         />
                     </div>
@@ -137,6 +139,8 @@ const data = {
                         <img
                             class="h-7 w-7 sm:h-9 sm:w-9"
                             :src="`${data.tech}typescript`"
+                            width="36"
+                            height="36"
                             alt="TypeScript"
                         />
 
@@ -150,7 +154,9 @@ const data = {
                     <!-- Profile -->
                     <img
                         class="h-56 w-56 rounded-full object-cover sm:h-64 sm:w-64 md:h-72 md:w-72 lg:h-80 lg:w-80"
-                        :src="data.profile"
+                        :src="`${data.profile}&s=320`"
+                        width="320"
+                        height="320"
                         alt="Profile"
                         fetchpriority="high"
                     />
@@ -162,6 +168,8 @@ const data = {
                         <img
                             class="h-7 w-7 sm:h-9 sm:w-9"
                             :src="`${data.tech}javascript`"
+                            width="36"
+                            height="36"
                             alt="JavaScript"
                         />
 

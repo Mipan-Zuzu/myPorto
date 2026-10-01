@@ -58,11 +58,11 @@ onBeforeUnmount(() => {
         <div>
             <img class="w-16" :src="data.img" alt="mipan">
         </div>
-        <div class="items-center text-stone-500 font-medium gap-10 hidden md:flex">
-            <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('aboutme')">{{ data.navigation.about }}</button>
-            <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('project')">{{ data.navigation.project }}</button>
-            <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('tech')">{{ data.navigation.tech }}</button>
-            <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('contact')">{{ data.navigation.contac }}</button>
+        <div class="items-center text-stone-700 font-medium gap-10 hidden md:flex">
+            <button class="cursor-pointer hover:text-stone-900 duration-300" @click="handlerScrol('aboutme')">{{ data.navigation.about }}</button>
+            <button class="cursor-pointer hover:text-stone-900 duration-300" @click="handlerScrol('project')">{{ data.navigation.project }}</button>
+            <button class="cursor-pointer hover:text-stone-900 duration-300" @click="handlerScrol('tech')">{{ data.navigation.tech }}</button>
+            <button class="cursor-pointer hover:text-stone-900 duration-300" @click="handlerScrol('contact')">{{ data.navigation.contac }}</button>
         </div>
         <div class="mr-5 md:mr-10">
             <button @click="handleNavigationBar" aria-label="close menu" class="flex gap-1 items-center">

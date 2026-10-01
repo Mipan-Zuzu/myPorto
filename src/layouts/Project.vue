@@ -146,7 +146,11 @@ const CardDat: CardProject[] = [
             style="opacity: 1; transform: none; transform-origin: 50% 50% 0px;">
             <div class="mb-6 w-full h-40 rounded-lg overflow-hidden bg-gray-200">
                 <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    :src="items.img" alt="">
+                    :src="items.img.includes('cloudinary') ? items.img.replace('/upload/', '/upload/f_auto,q_auto,w_400,h_160,c_fill/') : items.img"
+                    width="400"
+                    height="160"
+                    loading="lazy"
+                    :alt="items.titles">
             </div>
             <div>
                 <h1 class="text-2xl font-bold gradentText">{{ items.titles }}</h1>
