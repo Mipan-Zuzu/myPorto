@@ -113,17 +113,17 @@ const card: RoadmapCards[] = [
     {
         id: 4,
         status: "PROGRESS",
-        title: "System Quality"
+        title: "S Quality"
     },
     {
         id: 5,
         status: "PROGRESS",
-        title: "Performance & Traffic"
+        title: "Performance"
     },
     {
         id: 6,
         status: "PROGRESS",
-        title: "Deployment & Infrastructure"
+        title: "Infrastructure"
     },
 ]
 </script>

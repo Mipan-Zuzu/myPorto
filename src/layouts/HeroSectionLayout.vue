@@ -46,7 +46,7 @@ const data = {
 
                 <!-- Experience -->
                 <p
-                    class="mb-5 rotate-3 rounded-md bg-sky-300 px-3 py-1 text-base font-medium text-white sm:text-lg"
+                    class="mb-5 rotate-3 rounded-md bg-sky-500 px-3 py-1 text-base font-medium text-white sm:text-lg"
                 >
                     Experience ++
                 </p>
@@ -122,7 +122,7 @@ const data = {
             </div>
 
             <div
-                class="relative flex w-full max-w-md items-center justify-center md:max-w-lg"
+                class="relative flex w-full max-w-md items-center justify-center md:max-w-lg mt-10 -mb-10 md:mt-0 md:mb-0"
             >
 
                 <!-- Profile wrapper -->

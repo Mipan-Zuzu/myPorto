@@ -25,82 +25,66 @@ const scrollAnimation = {
     <div class="relative isolate min-h-screen overflow-x-hidden">
 
         <!-- Grid Background -->
-<div
-    class="
-        pointer-events-none
-        fixed
-        inset-0
-        z-0
+        <div class="
+                pointer-events-none
+                fixed
+                inset-0
+                z-0
+                bg-[linear-gradient(to_right,#d6d3d1_1px,transparent_1px),linear-gradient(to_bottom,#d6d3d1_1px,transparent_1px)]
+                bg-[size:40px_40px]
+                opacity-25
+                [mask-image:radial-gradient(ellipse_at_center,black_35%,transparent_85%)]
+                [mask-repeat:no-repeat]
+                [mask-size:100%_100%]
+            "></div>
 
-        bg-[linear-gradient(to_right,#d6d3d1_1px,transparent_1px),linear-gradient(to_bottom,#d6d3d1_1px,transparent_1px)]
-        bg-[size:40px_40px]
+        <!-- Background Text -->
+        <div class="
+                pointer-events-none
+                fixed
+                inset-0
+                z-0
+                flex
+                items-center
+                justify-center
+                overflow-hidden
+                px-4
+                md:justify-end
+                md:mr-10
+                md:px-0
+                lg:mr-15
+            ">
+            <span class="
+                    select-none
+                    whitespace-nowrap
+                    text-transparent
+                    text-[clamp(1rem,7vw,7rem)]
+                    font-black
+                    tracking-[-0.08em]
+                    [-webkit-text-stroke:1px_#e0f2fe]
+                    opacity-50
+                    sm:text-[clamp(1rem,6vw,6rem)]
+                    md:text-[clamp(2rem,6vw,6rem)]
+                    lg:text-[clamp(2rem,7vw,7rem)]
+                ">
+                M i p a n Z u z u .
+            </span>
+        </div>
 
-        opacity-25
+        <!-- Navbar -->
+        <NavbarLayout />
 
-        [mask-image:radial-gradient(ellipse_at_center,black_35%,transparent_85%)]
-        [mask-repeat:no-repeat]
-        [mask-size:100%_100%]
-    "
-></div>
-
-<div
-    class="
-        pointer-events-none
-        fixed
-        inset-0
-        z-0
-        flex
-        items-center
-        justify-center
-        overflow-hidden
-        px-4
-
-        md:justify-end
-        md:mr-10
-        md:px-0
-
-        lg:mr-15
-    "
->
-    <span
-        class="
-            select-none
-            whitespace-nowrap
-            text-transparent
-
-            text-[clamp(1rem,7vw,7rem)]
-            font-black
-            tracking-[-0.08em]
-
-            [-webkit-text-stroke:1px_#e0f2fe]
-            opacity-50
-
-            sm:text-[clamp(1rem,6vw,6rem)]
-            md:text-[clamp(2rem,6vw,6rem)]
-            lg:text-[clamp(2rem,7vw,7rem)]
-        "
-    >
-        M i p a n Z u z u .
-    </span>
-</div>
-
-        <div class="relative z-10 flex min-h-screen flex-col items-center">
-
-            <!-- Navbar -->
-            <NavbarLayout />
-
+        <main class="relative z-10">
 
             <!-- Hero -->
             <div class="mt-10 w-full">
                 <HeroSectionLayout />
             </div>
 
-
             <!-- Stats -->
             <div class="w-full">
                 <StatsLayouts />
             </div>
-
 
             <!-- About -->
             <div id="aboutme" v-animateonscroll.once="{
@@ -120,10 +104,8 @@ const scrollAnimation = {
                     lg:gap-48
                 ">
                 <ClaudeMascot />
-
                 <AboutLayout />
             </div>
-
 
             <!-- Tech -->
             <div id="tech" v-animateonscroll.once="{
@@ -140,7 +122,6 @@ const scrollAnimation = {
                 <ToolsTech />
             </div>
 
-
             <!-- Projects -->
             <div id="project" v-animateonscroll.once="{
                 ...scrollAnimation,
@@ -155,10 +136,8 @@ const scrollAnimation = {
                     py-20
                 ">
                 <TitleProject />
-
                 <Project />
             </div>
-
 
             <!-- Learning -->
             <div class="
@@ -171,29 +150,25 @@ const scrollAnimation = {
                     py-10
                 ">
                 <TitleLern class="mt-10" />
-
                 <LernLayout class="mt-4" />
             </div>
 
-
+            <!-- Repositories -->
             <div class="mt-20">
                 <RepositorysLayout />
             </div>
-
 
             <!-- Certificates -->
             <div class="flex w-full justify-center px-5 py-10">
                 <CertivLayout />
             </div>
 
-
             <!-- Clients -->
             <div class="mt-10">
                 <ClientLayouts />
             </div>
 
-
-            <!-- Contact + Footer -->
+            <!-- Contact -->
             <div class="
                     bg-white
                     mt-10
@@ -206,27 +181,23 @@ const scrollAnimation = {
                     md:mt-20
                     md:p-20
                 ">
-
-                <!-- Contact -->
                 <div id="contact" v-animateonscroll.once="{
                     ...scrollAnimation,
                     enterClass: 'scroll-reveal-up'
                 }">
                     <ContacLayout />
                 </div>
-
-
                 <!-- Footer -->
                 <FooterLayouts />
 
-
                 <!-- Copyright -->
-                <p class="mt-10 text-sm text-stone-600">
+                <p class="mt-10 text-sm text-stone-600 text-center">
                     © 2026 Mipan. All Rights Reserved.
                 </p>
-
             </div>
 
-        </div>
+        </main>
+
+
     </div>
 </template>

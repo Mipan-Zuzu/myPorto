@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
 
 <template>
     <div
-        class="fixed w-full flex justify-between text-sm p-1 top-2 ml-1  border menu border-stone-400 backdrop-blur-lg z-50">
+        class="fixed w-full flex justify-between text-sm p-1 ml-1 menu border-stone-400 backdrop-blur-lg z-50 shadow-[0_0_30px_rgba(255,255,255,10)]">
         <div>
             <img class="w-16" :src="data.img" alt="mipan">
         </div>
@@ -64,10 +64,10 @@ onBeforeUnmount(() => {
             <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('tech')">{{ data.navigation.tech }}</button>
             <button class="cursor-pointer hover:text-stone-400 duration-300" @click="handlerScrol('contact')">{{ data.navigation.contac }}</button>
         </div>
-        <div>
-            <button @click="handleNavigationBar" class="flex gap-1 items-center">
-                <ChevronDown class="w-3 h-3" />
-                <img class="w-10 rounded-full" :src="data.profile" alt="">
+        <div class="mr-5 md:mr-10">
+            <button @click="handleNavigationBar" aria-label="close menu" class="flex gap-1 items-center">
+                <ChevronDown class="w-3 h-3" aria-hidden="true" />
+                <img class="w-10 rounded-full" :src="data.profile" alt="profile_picture" aria-hidden="true">
             </button>
             <div :class="navbar
                 ? 'opacity-100 pointer-events-auto transition-opacity duration-100'

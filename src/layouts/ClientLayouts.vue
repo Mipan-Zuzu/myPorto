@@ -3,7 +3,7 @@ import SelectButton from 'primevue/selectbutton';
 import { ref, watch } from 'vue';
 
 const localLang = localStorage.getItem("lang")
-const value = ref(localLang === null? 'eng' : localLang);
+const value = ref(localLang === null ? 'eng' : localLang);
 const stateOptions = ref([
     { label: 'ENG', value: 'eng' },
     { label: 'IND', value: 'ind' }
@@ -49,9 +49,10 @@ const data = [
     <div class="text-center">
         <h2 class="border gradentText font-black">FEEDBACK ?</h2>
         <h1 class="text-5xl font-bold gradentText">What Client <span class="text-stone-600">Say</span></h1>
-            <div class="flex justify-center">
-        <SelectButton v-model="value" :options="stateOptions" optionLabel="label" optionValue="value" aria-labelledby="basic" class="mt-5" />
-    </div>
+        <div class="flex justify-center">
+            <SelectButton v-model="value" :options="stateOptions" optionLabel="label" optionValue="value"
+                aria-label="Select language" class="mt-5" />    
+        </div>
     </div>
     <div class="flex flex-col gap-5 justify-center mt-10">
         <div class="grid grid-cols-1 gap-2 md:grid-cols-3 ml-2 mr-2">
@@ -65,7 +66,8 @@ const data = [
                             <p>{{ item.star }}</p>
                         </div>
                     </div>
-                    <div class="mt-3 text-stone-500 font-light" v-html="value === 'eng'? item.desk : item.deskIndo"></div>
+                    <div class="mt-3 text-stone-500 font-light" v-html="value === 'eng' ? item.desk : item.deskIndo">
+                    </div>
                     <div class="flex gap-3 mt-5">
                         <div>
                             <img class="w-10 h-10 rounded-full" :src="item.img" alt="img">

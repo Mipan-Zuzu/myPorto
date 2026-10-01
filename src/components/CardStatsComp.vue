@@ -1,14 +1,23 @@
 <script setup lang="ts">
-    import type {CardStats} from "../types/Interface"
+import type { CardStats } from "../types/Interface"
 
-    const { rank, title, ico } = defineProps<CardStats>()
-
+const { rank, title, ico } = defineProps<CardStats>()
 </script>
 
 <template>
-        <div class="flex items-center gap-2">
-            <component :is="ico" class="size-10 md:size-13"></component>
-            <h1 class="text-6xl text-sky-500">{{ rank }}</h1>
-        </div>
-        <p class="text-xl">{{ title }}</p>
+  <div class="flex items-center gap-2">
+    <component
+      :is="ico"
+      class="size-10 md:size-13"
+      aria-hidden="true"
+    />
+
+    <h2 class="text-6xl text-sky-500">
+      {{ rank }}
+    </h2>
+  </div>
+
+  <p class="text-xl">
+    {{ title }}
+  </p>
 </template>

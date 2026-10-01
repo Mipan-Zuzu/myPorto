@@ -1,162 +1,238 @@
 @import "tailwindcss";
+
 @reference "tailwindcss";
 
-/* main.css atau style.css */
+/* ========================================
+   BASE
+======================================== */
+
 @layer base {
   ::selection {
     @apply bg-stone-800 text-white;
   }
+
+  html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  #app {
+    width: 100%;
+    min-height: 100vh;
+  }
 }
 
-body {font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;  
-}
+/* ========================================
+   ROBOTO
+======================================== */
 
-/* TODO: FONT ROBOTO */
 @font-face {
   font-family: Roboto;
   src: url("/font/roboto/Roboto-Bold.ttf");
   font-weight: 700;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Roboto;
   src: url("/font/roboto/Roboto-ExtraBold.ttf");
   font-weight: 800;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Roboto;
   src: url("/font/roboto/Roboto-Light.ttf");
   font-weight: 300;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Roboto;
   src: url("/font/roboto/Roboto-Medium.ttf");
   font-weight: 500;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Roboto;
   src: url("/font/roboto/Roboto-Regular.ttf");
   font-weight: 400;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Roboto;
   src: url("/font/roboto/Roboto-SemiBold.ttf");
   font-weight: 600;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Roboto;
   src: url("/font/roboto/Roboto-Thin.ttf");
   font-weight: 100;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
 
-/* TODO: FONT INTER */
 @font-face {
   font-family: Inter;
   src: url("/font/inter/Inter_28pt-Bold.ttf");
   font-weight: 700;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Inter;
   src: url("/font/inter/Inter_28pt-ExtraBold.ttf");
   font-weight: 800;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Inter;
   src: url("/font/inter/Inter_28pt-Medium.ttf");
   font-weight: 500;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Inter;
   src: url("/font/inter/Inter_28pt-Regular.ttf");
   font-weight: 400;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Inter;
   src: url("/font/inter/Inter_28pt-SemiBold.ttf");
   font-weight: 600;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: Inter;
   src: url("/font/inter/Inter_28pt-Thin.ttf");
   font-weight: 100;
-   font-style: normal;
+  font-style: normal;
   font-display: swap;
 }
+
+/* ========================================
+   TAILWIND THEME
+======================================== */
 
 @theme {
   --font-roboto: "Roboto", sans-serif;
   --font-inter: "Inter", sans-serif;
 }
 
+/* ========================================
+   TEXT
+======================================== */
+
 .gradentText {
-    @apply bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent
+  @apply bg-gradient-to-r from-sky-400 to-violet-400 bg-clip-text text-transparent;
 }
 
-;
-
 .gradentTextv2 {
-    @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent
+  @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
 }
 
 .gradentTextv3 {
-    @apply bg-gradient-to-r from-sky-400 to-violet-700 text-white
-}
-
-.nav-link {
-    @apply hover:bg-stone-700 hover:rounded-lg hover:duration-300
-}
-
-.nav {
-    @apply flex gap-2 p-1 items-center w-full
+  @apply bg-gradient-to-r from-sky-400 to-violet-700 text-white;
 }
 
 .textT {
-  @apply  bg-gradient-to-r from-sky-400 to-violet-400 text-white
+  @apply bg-gradient-to-r from-sky-400 to-violet-400 text-white;
 }
 
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.nav-link {
+  @apply hover:bg-stone-700 hover:rounded-lg hover:duration-300;
+}
+
+.nav {
+  @apply flex w-full items-center gap-2 p-1;
+}
+
+/* ========================================
+   SCROLL REVEAL
+======================================== */
+
 @keyframes scroll-reveal-up {
-  from { opacity: 0; transform: translateY(2.5rem); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes scroll-reveal-left {
-  from { opacity: 0; transform: translateX(-2.5rem); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-2.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes scroll-reveal-right {
-  from { opacity: 0; transform: translateX(2.5rem); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(2.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes scroll-reveal-scale {
-  from { opacity: 0; transform: scale(0.96); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .scroll-reveal-up,
@@ -169,10 +245,25 @@ body {font-family: "Poppins", sans-serif;
   will-change: opacity, transform;
 }
 
-.scroll-reveal-up { animation-name: scroll-reveal-up; }
-.scroll-reveal-left { animation-name: scroll-reveal-left; }
-.scroll-reveal-right { animation-name: scroll-reveal-right; }
-.scroll-reveal-scale { animation-name: scroll-reveal-scale; }
+.scroll-reveal-up {
+  animation-name: scroll-reveal-up;
+}
+
+.scroll-reveal-left {
+  animation-name: scroll-reveal-left;
+}
+
+.scroll-reveal-right {
+  animation-name: scroll-reveal-right;
+}
+
+.scroll-reveal-scale {
+  animation-name: scroll-reveal-scale;
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
 
 @media (prefers-reduced-motion: reduce) {
   .scroll-reveal-up,
@@ -181,4 +272,20 @@ body {font-family: "Poppins", sans-serif;
   .scroll-reveal-scale {
     animation-duration: 400ms;
   }
+}
+
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  width: max-content;
+  animation: marquee 120s linear infinite;
+  will-change: transform;
 }
