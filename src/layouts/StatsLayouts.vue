@@ -24,7 +24,7 @@ const stats: CardStats[] = [
     },
     {
         id : 4,
-        rank : "15 +",
+        rank : "16 +",
         title : "Technologies",
         ico: Layers
     }

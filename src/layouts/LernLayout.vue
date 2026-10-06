@@ -58,7 +58,7 @@ const data: DeskLayout[] = [
     {
         id: 9,
         title: "Performance & Traffic",
-        status: "PROGRESS",
+        status: "DONE",
         desk: "The process of controlling and distributing incoming requests to maintain application stability, responsiveness, and availability under different traffic conditions."
     },
     {
@@ -221,8 +221,8 @@ const card: RoadmapCards[] = [
                 </div>
                 <div class="grid grid-cols-1 gap-3 items-end border-l-2 border-gray-400 rounded-md p-1">
                     <div class="group cursor-pointer p-1 rounded-sm flex items-center gap-2 font-medium border px-3">
-                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-yellow-500"></p>
-                        <p class="w-2 h-2 rounded-full bg-yellow-500"></p>
+                        <p class="w-2 h-2 animate-ping absolute rounded-full bg-green-500"></p>
+                        <p class="w-2 h-2 rounded-full bg-green-500"></p>
                         <h1>traffic management</h1>
                         <TitleCard :title="data[8].title" :status="data[8].status" :desk="data[8].desk" />
                     </div>
