@@ -19,12 +19,18 @@ const code =
     return result
 }`
 
+const data = {
+    lang : 'TypeScript',
+    theme : 'vitesse-dark'
+}
+
 const result = ref()
 
 watchEffect(async () => {
-    const html = await codeToHtml(!htmlcode ? code : htmlcode, {
-        lang: 'TypeScript',
-        theme: 'vitesse-dark'
+    const condition = !htmlcode ? code : htmlcode
+    const html = await codeToHtml(condition, {
+        lang: data.lang,
+        theme: data.theme
     })
     result.value = html
 })

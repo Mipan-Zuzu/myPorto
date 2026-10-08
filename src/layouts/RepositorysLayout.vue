@@ -127,7 +127,7 @@ onUnmounted(() => {
         "
         :class="
           item.stargazers_count >= 4
-            ? 'border-violet-200 bg-gradient-to-br from-sky-50 via-purple-50 to-pink-50'
+            ? 'border-violet-200 bg-linear-to-br from-sky-50 via-purple-50 to-pink-50'
             : 'border-stone-300 bg-white/80'
         "
       >
