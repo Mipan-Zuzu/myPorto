@@ -118,7 +118,7 @@ const CardDat: CardProject[] = [
         status: "DONE",
         date: "Build September 07 , 2026",
         condition: true,
-        img: "https://i.ibb.co.com/Wvsy25Xk/Nyravid.gif",
+        img: "https://res.cloudinary.com/fwkoz9yt/image/upload/v1791533222/Nyravid-ezgif.com-optimize_vmgapk.gif",
         mediaType: "video",
         titles: "Nyra",
         desk: "Nyra is Asisten 3d anime in your desktop (same like vtuber) and my bini",
